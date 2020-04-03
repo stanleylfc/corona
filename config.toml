@@ -26,7 +26,7 @@ name = "stanley"
   localSearch = true
 
    # 全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能
-  toc = true  # 是否开启目录
+  # toc = true  # 是否开启目录
 
 ## 配置 utteranc评论,教程参考 https://utteranc.es/
 [params.utteranc]
