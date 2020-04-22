@@ -23,22 +23,28 @@ name = "stanley"
   description = "专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等"
   busuanzi = true #启用不算子网页统计
   googleAd = "ca-pub-4031353640611810"  #ca-pub-xxxxxxxxxxxxxx
-  localSearch = true
+  localSearch = true # 启用本地搜索
 
-   # 全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能
+  # 这里我存放在了主题的static文件夹里，根目录的似乎也可以
+  customCSS = ['douban.css', 'other.css']
+  # if ['custom.css'], load '/static/css/custom.css' file
+  customJS = ['douban.js']
+  # if ['custom.js'], load '/static/js/custom.js' file
+  
+  # 全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能
   # toc = true  # 是否开启目录
 
 ## 配置 utteranc评论,教程参考 https://utteranc.es/
 [params.utteranc]
   enable = true
-  repo = "git@github.com:stanleylfc/stanleylfc.github.io.git" ##换成自己得
+  repo = "https://github.com/stanleylfc/stanleylfc.github.io.git" ##换成自己得
   issueTerm = "pathname"
   theme = "github-light"
 
-[markup]
-  [markup.highlight]
-    lineNos = true
-    style = "github"
+##[markup]
+##  [markup.highlight]
+##    lineNos = true
+##    style = "github"
 
 [menu]
 
