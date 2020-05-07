@@ -177,7 +177,21 @@ Common Name (e.g. server FQDN or YOUR name) []:localhost  //这里填localhost �
 ```
 https://github.com/grpc-ecosystem/grpc-gateway
 ```
-### 7.2 生成两个文件
+### 7.2 编辑prod.pb.go
+#### 7.2.1 引入外部包
+```
+import "google/api/annotations.proto";
+```
+#### 7.2.2 增加http代码
+```
+rpc GetProdStock (ProdRequest) returns (ProdResponse) {
+        option (google.api.http) = {
+        get: "/v1/prod/{prod_id}"
+      };
+    }
+```
+
+### 7.3 生成两个文件
 - 首先cd 进入pbfiles
 - 生成prod.pb.go
 ```
@@ -188,7 +202,7 @@ protoc --go_out=plugins=grpc:../services Prod.proto
 protoc --grpc-gateway_out=logtostderr=true:../services Prod.proto
 ```
 
-### 7.3 新增httpserver 
+### 7.4 新增httpserver 
 ```
     gwmux := runtime.NewServeMux()
     opt := []grpc.DialOption{grpc.WithTransportCredentials(helper.GetClientCreds())}
@@ -205,6 +219,6 @@ protoc --grpc-gateway_out=logtostderr=true:../services Prod.proto
 
     httpServer.ListenAndServe()
 ```
-### 7.4 启动服务
+### 7.5 启动服务
 - 启动server
 - 启动client,httpserver
