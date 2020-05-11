@@ -4,6 +4,7 @@ tags=["hadoop"]
 categories=["hadoop"]
 date="2020-04-27T21:00:00+08:00"
 +++
+
 Redis Cluster的两种搭建和简单使用
 Redis Cluster是Redis官方的一个高可用分布式解决方案。Redis Cluster中共有2 ^ 14（16384）个槽，创建集群后，需要将这些槽均分给各个节点。
 

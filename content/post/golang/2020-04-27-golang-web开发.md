@@ -61,3 +61,5 @@ func fetch(url string) string {
 }
 ```
 ## 5. 中间件
+
+## 6. 高并发在web中的应用
