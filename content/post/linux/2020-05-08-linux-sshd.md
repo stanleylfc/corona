@@ -1,3 +1,10 @@
++++
+title="linux 服务实战（二）| syslog"
+tags=["linux"]
+categories=["linux"]
+date="2020-05-08T09:00:00+08:00"
+toc=true
++++
 
 ## 1. 系统中的ssh与sshd服务
 ### 1.1 概念简介  

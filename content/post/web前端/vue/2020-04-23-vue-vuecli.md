@@ -53,8 +53,6 @@ vue create testapp
 ├── package.json # 包相关的内容
 ├── public  # 静态文件放置的地方
 └── src  # 源代码
-
-
 ├── App.vue  # App.vue 挂载到main.js
 ├── assets
 ├── components
@@ -63,8 +61,9 @@ vue create testapp
 ### 2.6 编译
 vue文件转化成html文件
 ```
-npm run serve  # 运行
-npm run build  # 打包生成dist 文件夹 
+$ cd testapp
+$ npm run serve  # 运行
+$ npm run build  # 打包生成dist 文件夹 
 # 需要更改index.html 里 "/"的路径改成"./"
 
 ```
@@ -76,13 +75,17 @@ npm run build  # 打包生成dist 文件夹
 > vue ui  # 启动可视化界面
 ```
 
+### 3.2 vue-devtools
+- 浏览器安装vue 扩展
+
+
 ## 4. Vue cli 运行原理
 ### 4.1 require.js
 - 异步模块化加载（AMD)
 - 解决依赖关系
 - require会定义三个变量：define,require, requirejs。其中reqiure == requirejs
 - require 加载依赖模块，并执行加载完后的回调函数
-- define 定义一个模块
+- define 定义一个模块  
 例子1：加载本地文件
 ```
 a.js

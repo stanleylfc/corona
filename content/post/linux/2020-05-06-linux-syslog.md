@@ -1,8 +1,8 @@
 +++
-title="linux 实战（一）| syslog"
+title="linux 服务实战（三）| syslog"
 tags=["linux"]
 categories=["linux"]
-date="2020-04-03T09:00:00+08:00"
+date="2020-05-06T09:00:00+08:00"
 toc=true
 +++
 

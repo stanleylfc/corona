@@ -10,8 +10,16 @@ date="2019-12-11T21:00:00+08:00"
 ### 2.2 ansbile 配置文件
 ### 2.3 ansible inventory
 ### 2.4 ansible ad-hoc模块
+```
+ansible all -m shell -a "rm /opt/hadoop-2.7.7.tar.gz"
+ansible all -m copy -a "src=/opt/hadoop-2.7.7.tar.gz dest=/opt  mode=0755"
+ansible all -m unarchive -a "src=/opt/hadoop-2.7.7.tar.gz dest=/opt/ copy=no mode=0755"
+ansible all -m file -a "path=/root/hadoop/dfs/name state=directory mode=755"
+```
 
 ## 3.ansible playbook
+
+
 
 ## 4.ansible变量详解
 ## 5.ansible Task 任务控制
