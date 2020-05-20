@@ -57,3 +57,25 @@ cp node_exporter.service /lib/systemd/system/
 ```
 ln -s /opt/node_exporter/node_exporter /usr/local/bin/node_exporter
 ```
+### 2.3 例子操作步骤
+```
+cp /opt/nginx-vts-exporter/nginx-vts-exporter.service /lib/systemd/system/
+
+systemctl daemon-reload
+systemctl restart nginx-vts-exporter.service
+systemctl status nginx-vts-exporter.service
+```
+### 2.4 停用nginx
+```
+# 停用nginx-exporter
+
+systemctl stop nginx-exporter.service
+systemctl disable nginx-exporter.service
+systemctl status nginx-exporter.service
+
+location /nginx_status {
+	stub_status;
+	allow 127.0.0.1;	#only allow requests from localhost
+	deny all;		    #deny all other hosts	
+}
+```
