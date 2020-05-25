@@ -1,5 +1,5 @@
 +++
-title="linux 基础实战（一）| 用户管理"
+title="linux 基础实战（一）| linux 基本命令"
 tags=["linux"]
 categories=["linux"]
 date="2020-05-10T09:00:00+08:00"
