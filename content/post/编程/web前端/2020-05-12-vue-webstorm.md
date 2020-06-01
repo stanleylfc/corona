@@ -1,4 +1,9 @@
-
++++
+title="webStorm 实战（一）| webStorm"
+tags=["webStorm"]
+categories=["webStorm"]
+date="2020-04-23T09:00:00+08:00"
++++
 
 ## 1.新版WebStorm Tab键的缩进问题
 
@@ -25,7 +30,7 @@ indent_size = 2 改 indent_size = 4 以后代码缩进全变回4个空格缩进�
 新版WebStorm开始对editorconfig支持
 项目是我用老版webstrom时生成的，这个项目带了一个.editorconfig文件，然而之前我一直使用老版WebStorm，所以这个配置文件对我的设置没有任何影响。而当我升级到新版WebStorm的了以后, WebStorm开始支持editorconfig，于是项目下的.editorconfig生效并且优先权利大过我的settings配置，于是就出现了明明在settings里配置tabsize=4但实际还是以tabsize=2的大小格式化代码缩进。
 
-## 2. Ctrl+Alt+L格式化JS代码或格式化Vue代码后，单引号变成双引号，以及添加分号设置问题
+## 2.Ctrl+Alt+L格式化JS代码或格式化Vue代码后，单引号变成双引号，以及添加分号设置问题
 解决方法：
 
 编辑器左上角开始：File -> Settings -> Editor -> Code Style -> Javascript
@@ -36,4 +41,13 @@ indent_size = 2 改 indent_size = 4 以后代码缩进全变回4个空格缩进�
 
 3、Use single quotes（单引号） in new code
 
-## 3. tab空格用2个space 
+## 3.tab空格用2个space 
+
+## 4.格式化vue import&export
+- 是否可以在WebStorm的自动导入功能中在导入和大括号之间添加空格？
+
+```
+import {AbstractControl} from '@angular/forms';
+import { AbstractControl } from '@angular/forms';
+```
+![webstorm.png](/assets/webstorm.png)

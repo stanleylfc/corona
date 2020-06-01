@@ -38,6 +38,6 @@ servcie sshd restart
 ## 3.客户端
 ### 3.3 连接方式
 ```
- ssh    username@ip    文本模式的连接
+ ssh     username@ip    文本模式的连接
  ssh -x  username@ip   可以在连接成功后开机图形
 ``` 
