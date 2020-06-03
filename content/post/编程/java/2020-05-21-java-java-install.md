@@ -27,7 +27,6 @@ $ java -version
 ```
 ## 2. 安装idea
 
-
 ## 3. 安装tomcat
 ### 3.1 下载
 - 登录Apache Tomcat官网，地址 http://tomcat.apache.org ，点击左边的Download，选择需要下载的版本。

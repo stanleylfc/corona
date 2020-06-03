@@ -14,10 +14,20 @@ $ id -u root
 ```sh
 $ tail -10f  /var/log/secure
 Authentication refused: bad ownership or modes for file /home/xxxxxx/.ssh/authorized_keys
-#解决方法：chmod 600  /home/hadoop/.ssh/authorized_keys
+# 解决方法：chmod 600  /home/hadoop/.ssh/authorized_keys
 ```
 
-## 2. 拷贝远端文件
+### 1.3 机器时钟同步
+```sh
+# 安装ntpdate工具 
+$ yum -y install ntp ntpdate
+# 设置系统时间与网络时间同步
+$ ntpdate 0.asia.pool.ntp.org
+# 将系统时间写入硬件时间
+$ hwclock --systohc
+```
+
+## 2. 文件管理
 ### 2.1 拷贝本机/home/administrator/test整个目录至远程主机192.168.1.100的/root目录下
 ```sh 
 $ scp -r /home/administrator/test/ root@192.168.1.100:/root/
@@ -52,4 +62,30 @@ $ gzip -rv test6
 这样，所有test下面的文件都变成了.gz，目录依然存在只是目录里面的文件相应变成了.gz.这就是压缩，和打包不同。因为是对目录操作，所以需要加上-r选项，这样也可以对子目录进行递归了。
 递归地解压目录
 $ gzip -dr test6
+```
+
+### 3.3 磁盘清理
+```
+df -TH
+du -sh
+```
+## 4.进程
+### 4.1 查看进程占用
+```
+lsof -i tcp:8080 
+```
+### 4.2 查看端口占用
+```
+netstat -tunlp
+```
+
+## 5.后台进程
+### 5.1 后台运行
+```sh
+$ nohup java -jar demo.jar >> ./log/nohup`date +%Y-%m-%d`.out 2>&1 &
+$ nohup bash demo.sh > /data/output.log 2>&1 &
+```
+### 5.2 单进程运行
+```sh
+$ nohup /usr/bin/flock -w0 /tmp/mid_dau.lock -c '/opt/start.sh' > /data/output.log 2>&1 &
 ```

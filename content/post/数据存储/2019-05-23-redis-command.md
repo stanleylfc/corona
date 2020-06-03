@@ -2,7 +2,7 @@
 title="redis 实战（一）| redis 安装"
 tags=["redis"]
 categories=["redis"]
-date="2020-05-23T21:00:00+08:00"
+date="2019-05-23T21:00:00+08:00"
 +++
 
 ## 1. redis 特征
