@@ -42,4 +42,12 @@ toc=true
 ```
     deactivate
 ```
+
+### 6. python 包升级
+
+```
+ pip install --upgrade pip
+ pip install facebook-business --upgrade
+ pip freeze > requirements.txt 
+```
  

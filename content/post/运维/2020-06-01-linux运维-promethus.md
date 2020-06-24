@@ -143,4 +143,52 @@ scrape_configs:
 ```
 $ systemctl reload prometheus.service
 ```
+- 检查配置是否成功
+```sh
+ $ ./promtool check config prometheus.yml
+```
 ### 4.报警
+
+
+### 4.1 部署alertmanager
+- 检查配置文件：./amtool check-config alertmanager.yml
+```
+global:
+  resolve_timeout: 5m
+  smtp_smarthost: 'smtp.163.com:25'
+  smtp_from: 'lifeicheng456@163.com'
+  smtp_auth_username: 'lifeicheng456@163.com'
+  smtp_auth_password: 'lfc3831658'
+  smtp_require_tls: false
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 1m
+  receiver: 'mail'
+receivers:
+- name: 'mail'
+  email_configs:
+  - to: '103349002@qq.com'
+```
+### 4.2 配置prometheus 与 alertmanager 通信
+- prometheus.yml 配置文件增加下面配置
+```yml
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets: ["172.16.232.128:9093"]
+```
+
+### 4.3 在premetheus 中创建告警规则
+- prometheus.yml 配置文件修改
+``` yml
+rule_files:
+  - "rules/*.yml"
+  # - "second_rules.yml"
+```
+- 创建rules 目录 
+```sh
+test.yml
+```

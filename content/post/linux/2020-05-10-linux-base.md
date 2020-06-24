@@ -26,6 +26,24 @@ $ ntpdate 0.asia.pool.ntp.org
 # 将系统时间写入硬件时间
 $ hwclock --systohc
 ```
+- 修改时区
+```sh
+# 1.查看当前时区
+date -R
+
+# 2.修改设置时区
+方法(1)
+tzselect
+方法(2) 仅限于RedHat Linux 和 CentOS系统
+timeconfig
+方法(3) 适用于Debian
+dpkg-reconfigure tzdata
+
+# 3.复制相应的时区文件，替换CentOS系统时区文件；或者创建链接文件
+cp /usr/share/zoneinfo/$主时区/$次时区 /etc/localtime
+在中国可以使用：
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+```
 
 ## 2. 文件管理
 ### 2.1 拷贝本机/home/administrator/test整个目录至远程主机192.168.1.100的/root目录下

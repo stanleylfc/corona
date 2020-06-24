@@ -28,3 +28,15 @@ http://centos7:3000
 - grafana 的数据源配置完成后，可以导入一个 dashboard 模板文件，建议节点模板使用 [node_exporter](https://grafana.com/grafana/dashboards/8919) 展示面板模板  
 
 ![grafana](/assets/grafana.png)
+
+## 4. 修改grafana密码
+### 4.1 命令行修改
+```
+grafana-cli admin reset-admin-password <new password>
+```
+如果上述方法报错：Could not find config defaults, make sure homepath command line parameter is set or working directory is homepath
+
+那么使用如下 flag 来指定参数
+```
+grafana-cli admin reset-admin-password --homepath "/usr/share/grafana" newpass
+```
