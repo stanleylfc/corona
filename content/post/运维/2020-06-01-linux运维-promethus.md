@@ -172,7 +172,15 @@ receivers:
   email_configs:
   - to: '103349002@qq.com'
 ```
-### 4.2 配置prometheus 与 alertmanager 通信
+
+### 4.2 alertmanager 启动和访问
+```
+# 启动
+./alertmanager --config.file=alertmanager.yml
+# 访问
+http://centos7:9093/
+```
+### 4.3 配置prometheus 与 alertmanager 通信
 - prometheus.yml 配置文件增加下面配置
 ```yml
 alerting:
