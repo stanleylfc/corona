@@ -72,6 +72,18 @@ service ProdService {
 ```
 protoc --go_out=plugins=grpc:../services/ Prod.proto
 ```
+```
+命令解释：
+protoc --go_out=plugins=grpc:. ./proto/*.proto
+// --go_out：设置所生成的Go 代码输出的目录。该指令会加载 p
+rotoc-gen-go 插件，以达到生成Go代码的目的。生成的文件以.pb.go
+为文件后缀，这里的“：”（冒号）有分隔符的作用，后跟命令所需要的参数集，这意味着把生成的Go代码输出到指向的protoc编译的当前目录。
+// plugins=plugin1+plugin2：指定要加载的子插件列表。我们
+定义的proto文件是涉及了RPC 服务的，而默认是不会生成RPC代码
+的，因此需要在go_out中给出plugins参数，将其传递给protoc-gen-g
+o插件，即告诉编译器，请支持RPC（这里指定了内置的grpc插件）
+
+```
 ### 4.3 实现服务（实现Service接口）
 ```
 package services
