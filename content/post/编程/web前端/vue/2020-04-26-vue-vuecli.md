@@ -17,9 +17,10 @@ vue --version
 ```
 
 ## 2. 创建项目
-### 2.1 创建项目命令
+### 2.1 创建项目一个新项目
 ```
 vue create testapp
+vue create --help
 ```
 ### 2.2 选择自定义
 ```
@@ -38,7 +39,7 @@ vue create testapp
  ◯ Unit Testing
  ◯ E2E Testing
 ```
-### 2.4 配置独立一个文件还是一个文件
+### 2.4 配置独立一个文件
 ```
   In dedicated config files
 > In package.json
@@ -65,7 +66,6 @@ $ cd testapp
 $ npm run serve  # 运行
 $ npm run build  # 打包生成dist 文件夹 
 # 需要更改index.html 里 "/"的路径改成"./"
-
 ```
 
 ## 3. 图形化界面创建和管理项目
@@ -77,7 +77,6 @@ $ npm run build  # 打包生成dist 文件夹
 
 ### 3.2 vue-devtools
 - 浏览器安装vue 扩展
-
 
 ## 4. Vue cli 运行原理
 ### 4.1 require.js

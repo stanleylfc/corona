@@ -4,6 +4,8 @@ tags=["bigquery"]
 categories=["bigquery"]
 date="2020-06-03T21:00:00+08:00"
 +++
+
+
 ## 2. bigquery 表
 ### 2.1 显示表结构
 ```sh
@@ -12,6 +14,7 @@ bq show --schema --format=prettyjson projectId:dataset.tablename > tablename.jso
 ### 2.2 创建表
 ```sh
 bq mk --table projectId:dataset.tablename /data/tablename.json
+bq mk --table --time_partitioning_field dt projectId:dataset.tablename /data/tablename.json
 ```
 ### 2.3 自动加载数据创建表
 ```sh

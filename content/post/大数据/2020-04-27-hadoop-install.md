@@ -355,7 +355,16 @@ centos702，centos703也需要进行如下操作
 ### 4.2 启动集群
 ```
 [hadoop@centos701 ~]$ start-all.sh 
-[hadoop@centos701 ~]$ jps 
+[hadoop@centos701 ~]$ jps
+21108 SecondaryNameNode
+20792 NameNode
+13420 Jps
+21327 ResourceManager
+
+[hadoop@centos702 bin]$ jps
+74033 NodeManager
+74146 Jps
+73884 DataNode
 ```
 ### 4.3 停止集群
 ```
@@ -382,5 +391,5 @@ centos702，centos703也需要进行如下操作
 ```
 ```
 > hdfs dfs -mkdir -p /user/hadoop
-> 
+> hdfs dfs -ls /
 ```

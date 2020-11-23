@@ -1,0 +1,27 @@
++++
+title="vue 实战（六）| vue project"
+tags=["vue"]
+categories=["vue"]
+date="2020-04-23T09:00:00+08:00"
++++
+
+```
+VUEX中的dispatch()和commit()
+commit: 同步操作
+存储 this.$store.commit('changeValue',name)
+取值 this.$store.state.changeValue
+```
+ 
+```
+dispatch: 异步操作
+存储 this.$store.dispatch('getlists',name)
+取值 this.$store.getters.getlists
+```
+
+```
+this.$store.dispatch('user/login', this.loginForm) 访问store 下面user 模块的login 方法
+```
+
+```
+router.push('/login') '/login'前端路由
+```

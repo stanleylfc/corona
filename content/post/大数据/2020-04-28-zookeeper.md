@@ -33,7 +33,7 @@ export PATH
     [root@centos701 ~]# chmod -R 755 /opt/zookeeper
 ```
 ### 1.3 创建myid 文件
-- 在节点centos701,centos702,centos703对应的/var/lib/zookeeper目录下(dataDir配置的目录/var/lib/zookeeper)创建myid文件,几个文件内容一次问1,2,3
+- 在节点centos701,centos702,centos703对应的/var/lib/zookeeper目录下(dataDir配置的目录/var/lib/zookeeper)创建myid文件,几个文件内容一次为1,2,3
 
 ### 1.4 修改myid 目录权限
 ```

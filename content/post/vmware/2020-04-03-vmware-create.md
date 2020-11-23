@@ -151,3 +151,27 @@ fixed-address 192.168.187.104;
 3.【网络适配器】-> 【高级选项】-> 【生成】 新的MAC地址由于硬件配置和源主机一样，修改一下网卡。
 4.重新生成ssh-keygen
 5.查看
+
+### 配置静态ip 地址
+```
+HWADDR=00:0c:29:39:12:c7    # ip addr 查看的
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens33
+UUID=7b6f986c-6635-4b5b-8d05-af0691156a2e
+DEVICE=ens33
+ONBOOT=yes
+IPADDR=172.16.232.128
+PREFIX=24
+GATEWAY=172.16.232.2
+DNS1=172.16.232.2
+```
