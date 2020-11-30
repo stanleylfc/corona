@@ -1,7 +1,7 @@
 +++
 title="go 实战（十三）| go gateway开发"
-tags=["go"]
-categories=["go"]
+tags=["golang"]
+categories=["golang"]
 date="2020-04-28T21:00:00+08:00"
 +++
 

@@ -1,7 +1,7 @@
 +++
 title="go 实战（二）| go 常用命令"
-tags=["goloand"]
-categories=["goloand"]
+tags=["golang"]
+categories=["golang"]
 date="2020-06-30T11:00:00+08:00"
 +++
 

@@ -2,7 +2,7 @@
 title="大数据 实战（二）| zookeeper 安装"
 tags=["zookeeper"]
 categories=["大数据"]
-date="2020-04-28T21:00:00+08:00"
+date="2020-04-27T21:00:00+08:00"
 +++
 ## 1. zookeeper 安装
 ### 1.1 zookeeper 环境变量配置
@@ -24,7 +24,7 @@ export PATH
 - 将目录切换到zookeeper目录下的conf目录下复制zoo_sample.cfg文件为zoo.cfg。
 ```
 1. 修改dataDir 的值为dataDir=/var/lib/zookeeper
-2. 在配置文件末尾添加如下配置：
+2. 在配置文件末尾添加如下配置：(第一端口用于仲裁通信， 第二个端口用于群首选举)
     server.1=centos701:2888:3888
     server.2=centos702:2888:3888
     server.3=centos703:2888:3888
@@ -93,6 +93,13 @@ export PATH
 ```
 # zkCli.sh 连接到集群
 [hadoop@centos701 zookeeper]# zkCli.sh -server centos701:2181,centos702:2181,centos703:2181
+```
+
+### 3.3 zookeeper 操作命令
+```
+[hadoop] get /zookeeper
+
+[hadoop] create -s /test "testdata"
 ```
 
 ## 4. 常见问题

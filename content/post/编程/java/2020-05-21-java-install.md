@@ -21,9 +21,7 @@ export JAVA_HOME
 export CLASSPATH
 export PATH
 ```
-### 测试配置
+### 1.3测试配置
 ```
 $ java -version
 ```
-## 2. 安装idea
-### 2.1 安装intellj

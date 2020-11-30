@@ -1,7 +1,7 @@
 +++
 title="go 包练习（一）| go viper cron cobra"
-tags=["go"]
-categories=["go"]
+tags=["golang"]
+categories=["golang"]
 date="2020-04-28T21:00:00+08:00"
 
 +++

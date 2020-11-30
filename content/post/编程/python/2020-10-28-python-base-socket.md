@@ -1,7 +1,7 @@
 +++
-title="python 实战（五）| 网络编程粘包"
+title="python 理论（四）| 网络编程粘包"
 tags=["python"]
-categories=["Python"]
+categories=["python"]
 date="2020-04-14T15:00:00+08:00"
 +++
 

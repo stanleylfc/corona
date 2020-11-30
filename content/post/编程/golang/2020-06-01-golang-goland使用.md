@@ -1,7 +1,7 @@
 +++
-title="go 实战（一）| go goloand"
-tags=["goloand"]
-categories=["goloand"]
+title="go 实战（一）| go goland"
+tags=["golang"]
+categories=["golang"]
 date="2020-06-01T11:00:00+08:00"
 +++
 

@@ -1,7 +1,7 @@
 +++
 title="bigquery 实战（三）| looker model"
-tags=["bigquery","looker"]
-categories=["bigquery","looker"]
+tags=["bigquery"]
+categories=["bigquery"]
 date="2020-11-19T00:00:00+08:00"
 +++
 ## 1.创建model

@@ -1,7 +1,7 @@
 +++
 title="go 实战(二）| web 编程"
-tags=["go"]
-categories=["go"]
+tags=["golang"]
+categories=["golang"]
 date="2020-10-23T21:00:00+08:00"
 +++
 

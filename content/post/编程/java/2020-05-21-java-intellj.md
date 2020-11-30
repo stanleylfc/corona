@@ -5,21 +5,23 @@ categories=["java"]
 date="2020-05-20T21:00:00+08:00"
 +++
 
-## 1. 新建普通Java项目
-### 1.1 File >> New Project 点击 next
-![java-project](/assets/java-project.png)
+## 1. IDEA 的项目结构
+- project
+- module
+- package
+- file
 
-### 1.2 选择项目初始化模板
-- 默认先不选
-![java-project-template](/assets/java-project-template.png)
-
-### 1.2 填写项目 learn-java
-![java-project-name](/assets/java-project-name.png)
-
-### 1.4 helloword demo
-![java-project-helloword](/assets/java-project-helloword.png)
-
-## 2. 新建web 项目
-
-
-## 3. 使用maven创建项目
+## 2. 新建 project
+### 2.1 新建 learn-java 项目名
+![new_project.jpg](/assets/java/new_project.jpg)
+## 3. 新建 module
+### 3.1 选择新建module
+![new_module.jpg](/assets/java/new_module.jpg)
+### 3.2 输入module 名字
+![new_module2.jpg](/assets/java/new_module2.jpg)
+## 4. 新建 package 
+- 包一组文件夹的名称
+### 4.1 包名最好是英文字母和.分隔，不建议使用中文
+![new_package.jpg](/assets/java/new_package.jpg)
+## 5. 新建java file
+![new_java.jpg](/assets/java/new_java.jpg)

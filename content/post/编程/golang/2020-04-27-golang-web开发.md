@@ -1,7 +1,7 @@
 +++
 title="go 实战（十一）| go web开发"
-tags=["go"]
-categories=["go"]
+tags=["golang"]
+categories=["golang"]
 date="2020-04-27T21:00:00+08:00"
 +++
 ## 1.web服务器
